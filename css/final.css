@@ -1608,12 +1608,12 @@ a.readmore:hover{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
 }
 
 .things {
   flex: 1 1 30%;
-  max-width: 20%;
+  max-width: 30%;
   box-sizing: border-box;
   text-align: center;
 }
