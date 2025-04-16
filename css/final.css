@@ -1603,3 +1603,17 @@ a.readmore:hover{
     transform-origin: 50% 50%;
   }
 }
+
+.golden-circle-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* optional spacing between items */
+}
+
+.things {
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+  text-align: center;
+}
