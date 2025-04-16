@@ -1608,7 +1608,7 @@ a.readmore:hover{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px; /* optional spacing between items */
+  gap: 30px;
 }
 
 .things {
