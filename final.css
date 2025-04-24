@@ -1460,8 +1460,7 @@ a {
 }*/
 .things img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3; /* optional for consistent shape */
+  height: 200px;
   object-fit: cover;   /* ensures the image fills the space nicely */
   border-radius: 8px;  /* optional: adds a nice rounded look */
 }
