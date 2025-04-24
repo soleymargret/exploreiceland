@@ -1608,16 +1608,28 @@ a.readmore:hover{
   }
 }
 
-.golden-circle-flex {
+.new {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px; /* optional spacing between items */
+  justify-content: space-between;
+  gap: 24px;  /* spacing between items */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.things {
-  flex: 1 1 30%;
-  max-width: 30%;
+.new .things {
+  flex: 1 1 calc(33.333% - 16px); /* fit 3 in a row with gap subtracted */
+  max-width: calc(33.333% - 16px);
   box-sizing: border-box;
   text-align: center;
+}
+
+.new .things img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 12px;
 }
