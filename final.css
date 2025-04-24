@@ -1455,9 +1455,16 @@ a {
 
 }
 
-.things img{
+/*.things img{
 
-	height: 20%;
+	*height: 20%;
+}*/
+.things img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; /* optional for consistent shape */
+  object-fit: cover;   /* ensures the image fills the space nicely */
+  border-radius: 8px;  /* optional: adds a nice rounded look */
 }
 
 .w3-third {
