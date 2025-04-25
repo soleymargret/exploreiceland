@@ -1621,9 +1621,9 @@ a.readmore:hover{
 
 .golden-circle-flex .things img {
   width: 100%;
-  height: 200px;        /* 🔥 This makes them uniform height */
-  object-fit: cover;    /* ✅ Crops the image instead of squishing */
+  height: 200px;          /* Makes all images same height */
+  object-fit: cover;      /* Prevents squishing */
   border-radius: 8px;
   display: block;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
 }
