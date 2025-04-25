@@ -1606,22 +1606,25 @@ a.readmore:hover{
 
 .golden-circle-flex {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-/*
-*.things {
- * flex: 1 1 30%;
-  *max-width: 30%;
-  *box-sizing: border-box;
-  *text-align: center;
-*}
 
-*.things img {
- * width: 100%;
-  *height: auto;
-  *aspect-ratio: 4 / 3;   /* optional, keeps a consistent shape */
-  *object-fit: cover;     /* ensures nice cropping if aspect ratio is used */
-  *border-radius: 8px;    /* optional: keeps that rounded look */
-}*/
+.golden-circle-flex .things {
+  flex: 1 1 calc(33.333% - 16px);
+  max-width: calc(33.333% - 16px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.golden-circle-flex .things img {
+  width: 100%;
+  height: 200px;      /* keep all images the same height */
+  object-fit: cover;  /* crop nicely */
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
