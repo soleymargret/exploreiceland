@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://animista.net/play/text/pop-up">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<!-- Leaflet JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -148,7 +152,9 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
   </div>
-
+<h2 class="w3-wide w3-center">Explore on the Map</h2>
+<div id="map" style="height: 500px; margin: 0 auto; max-width: 1000px;"></div>
+  
   <button type="button"
 onclick="document.getElementById('date').innerHTML = Date()">
 Click me to display Date and Time.</button>
@@ -209,6 +215,25 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// Create the map
+var map = L.map('map').setView([64.9631, -19.0208], 6); // Iceland center coords
+
+// Add OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// Add a few example pins (markers)
+L.marker([64.2559, -20.1218]).addTo(map)
+  .bindPopup('Blue Lagoon');
+
+L.marker([64.0725, -16.2426]).addTo(map)
+  .bindPopup('Vatnajökull Glacier');
+
+L.marker([64.1385, -21.8954]).addTo(map)
+  .bindPopup('Reykjavík');
+
 </script>
 
 </body>
